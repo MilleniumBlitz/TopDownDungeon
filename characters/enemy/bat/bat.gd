@@ -11,4 +11,9 @@ func _physics_process(delta):
 	
 func _on_Hurtbox_area_entered(area):
 	set_physics_process(true)
+	$Stats.health -= 1
 	knockback = area.attack_vector * 100
+
+
+func _on_Stats_no_health():
+	queue_free()

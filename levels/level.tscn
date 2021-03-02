@@ -461,7 +461,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 script = ExtResource( 4 )
 
 [node name="Grass" type="Sprite" parent="."]
-position = Vector2( 67, 65.5 )
+position = Vector2( 61.2806, 65.9204 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1024, 1024 )
@@ -520,20 +520,17 @@ position = Vector2( -96, 176 )
 [node name="Grass7" parent="YSort/Grasses" instance=ExtResource( 5 )]
 position = Vector2( -112, 176 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 7 )]
-position = Vector2( -68.0821, 118.921 )
+[node name="Bat" parent="." instance=ExtResource( 7 )]
+position = Vector2( -42.7201, 102.569 )
 
-[node name="KinematicBody2D2" parent="." instance=ExtResource( 7 )]
-position = Vector2( -31.8113, 132.894 )
+[node name="Bat2" parent="." instance=ExtResource( 7 )]
+position = Vector2( -111.631, 118.254 )
 
-[node name="KinematicBody2D3" parent="." instance=ExtResource( 7 )]
-position = Vector2( -41.325, 106.434 )
+[node name="Bat3" parent="." instance=ExtResource( 7 )]
+position = Vector2( -20.1947, 128.932 )
 
-[node name="KinematicBody2D4" parent="." instance=ExtResource( 7 )]
-position = Vector2( -61.8388, 145.975 )
+[node name="Bat4" parent="." instance=ExtResource( 7 )]
+position = Vector2( -96.1137, 140.946 )
 
-[node name="KinematicBody2D5" parent="." instance=ExtResource( 7 )]
-position = Vector2( -22.8922, 171.84 )
-
-[node name="KinematicBody2D6" parent="." instance=ExtResource( 7 )]
-position = Vector2( -101.38, 147.759 )
+[node name="Bat5" parent="." instance=ExtResource( 7 )]
+position = Vector2( -57.9039, 142.114 )
