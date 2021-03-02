@@ -5,7 +5,7 @@ const ACCEL = 400
 const FRICTION = 800
 
 var velocity = Vector2.ZERO
-var roll_vector = Vector2.LEFT
+var roll_vector = Vector2.DOWN
 
 onready var animation_player = $AnimationPlayer
 onready var animation_tree = $AnimationTree

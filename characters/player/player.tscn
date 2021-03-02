@@ -630,7 +630,7 @@ editor_draw_drag_margin = true
 position = Vector2( 0, -9 )
 texture = ExtResource( 1 )
 hframes = 60
-frame = 12
+frame = 18
 region_rect = Rect2( 16, 32, 806, 40 )
 __meta__ = {
 "_edit_lock_": true
@@ -663,10 +663,10 @@ tree_root = SubResource( 46 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 47 )
-parameters/Attack/blend_position = Vector2( -0.00167131, -0.0023061 )
-parameters/Idle/blend_position = Vector2( -0.0027855, -0.00327873 )
-parameters/Roll/blend_position = Vector2( -0.000557125, 0.00209641 )
-parameters/Run/blend_position = Vector2( -0.00167131, 0 )
+parameters/Attack/blend_position = Vector2( 0, 1 )
+parameters/Idle/blend_position = Vector2( 0, 1 )
+parameters/Roll/blend_position = Vector2( 0, 1 )
+parameters/Run/blend_position = Vector2( 0, 1 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -9 )

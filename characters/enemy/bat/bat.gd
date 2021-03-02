@@ -16,4 +16,7 @@ func _on_Hurtbox_area_entered(area):
 
 
 func _on_Stats_no_health():
+	var death_effect = load("res://characters/enemy/bat/death_effect.tscn").instance()
+	death_effect.global_position = global_position
+	get_parent().add_child(death_effect)
 	queue_free()
