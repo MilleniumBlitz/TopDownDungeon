@@ -36,7 +36,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CircleShape2D" id=8]
-radius = 4.52084
+radius = 9.97172
 
 [node name="Bat" type="KinematicBody2D"]
 collision_layer = 9
@@ -54,10 +54,10 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 7 )
 animation = "Animate"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource( 8 )
 
 [node name="Stats" parent="." instance=ExtResource( 4 )]
