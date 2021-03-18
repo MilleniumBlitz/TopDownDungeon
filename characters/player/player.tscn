@@ -614,6 +614,7 @@ start_node = "Idle"
 [sub_resource type="CapsuleShape2D" id=48]
 
 [node name="Player" type="KinematicBody2D"]
+collision_layer = 6
 collision_mask = 0
 script = ExtResource( 2 )
 

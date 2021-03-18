@@ -1,9 +1,13 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://tools/hurtbox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/characters/bat.png" type="Texture" id=2]
 [ext_resource path="res://characters/enemy/bat/bat.gd" type="Script" id=3]
 [ext_resource path="res://tools/stats.tscn" type="PackedScene" id=4]
+[ext_resource path="res://characters/enemy/bat/bat_sm.gd" type="Script" id=5]
+[ext_resource path="res://characters/enemy/bat/states/wander.gd" type="Script" id=6]
+[ext_resource path="res://characters/enemy/bat/states/chase.gd" type="Script" id=7]
+[ext_resource path="res://characters/enemy/bat/PlayerDetection.gd" type="Script" id=8]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -38,6 +42,9 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=8]
 radius = 4.52084
 
+[sub_resource type="CircleShape2D" id=9]
+radius = 79.0883
+
 [node name="Bat" type="KinematicBody2D"]
 collision_layer = 9
 script = ExtResource( 3 )
@@ -62,7 +69,26 @@ shape = SubResource( 8 )
 
 [node name="Stats" parent="." instance=ExtResource( 4 )]
 max_healt = 4
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+shape = SubResource( 9 )
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource( 5 )
+
+[node name="Wander" type="Node" parent="StateMachine"]
+script = ExtResource( 6 )
+
+[node name="Chase" type="Node" parent="StateMachine"]
+script = ExtResource( 7 )
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
+[connection signal="body_entered" from="PlayerDetection" to="PlayerDetection" method="_on_PlayerDetection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="PlayerDetection" method="_on_PlayerDetection_body_exited"]
 
 [editable path="Hurtbox"]
