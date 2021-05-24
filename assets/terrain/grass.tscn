@@ -21,6 +21,7 @@ shape = SubResource( 1 )
 texture = ExtResource( 1 )
 centered = false
 offset = Vector2( -8, -8 )
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
 [editable path="Hurtbox"]
