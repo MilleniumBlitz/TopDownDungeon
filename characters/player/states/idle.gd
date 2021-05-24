@@ -10,7 +10,6 @@ func _handle_input(event):
 		emit_signal("finished", "roll")
 
 func _update(delta):
-	var input_dir = owner.get_input_direction()
 	
 	owner.velocity = owner.velocity.move_toward(Vector2.ZERO, owner.FRICTION * delta)
 
