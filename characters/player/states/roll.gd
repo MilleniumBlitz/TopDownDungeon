@@ -5,7 +5,7 @@ func _handle_input(event):
 		emit_signal("finished", "attack")
 
 func _enter():
-	owner.animation_state.travel("Roll")	
+	owner.animation_state.travel("Roll")
 	
 func _update(delta):
 	owner.velocity = owner.roll_vector * 120

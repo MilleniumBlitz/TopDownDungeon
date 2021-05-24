@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://assets/terrain/grass_background.png" type="Texture" id=1]
 [ext_resource path="res://assets/terrain/cliff_tileset.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/terrain/grass.tscn" type="PackedScene" id=5]
 [ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://characters/enemy/bat/bat.tscn" type="PackedScene" id=7]
+[ext_resource path="res://ui/health_ui.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -537,3 +538,5 @@ position = Vector2( -96.1137, 140.946 )
 
 [node name="Bat5" parent="YSort/Ennemies" instance=ExtResource( 7 )]
 position = Vector2( 242.902, -73.3327 )
+
+[node name="HealthUI" parent="." instance=ExtResource( 8 )]
