@@ -11,6 +11,7 @@ var knockback = Vector2.ZERO
 onready var player_detection_zone = $PlayerDetection
 onready var sprite = $AnimatedSprite
 onready var hurtbox = $Hurtbox
+onready var soft_collision = $SoftCollision
 
 func _ready():
 	set_physics_process(false)
@@ -26,6 +27,10 @@ func _on_Hurtbox_area_entered(area):
 	knockback = area.attack_vector * 120
 
 func move():
+	
+	if soft_collision.is_colliding():
+		velocity += soft_collision.get_push_vector() * 40
+	
 	velocity = move_and_slide(velocity)
 
 func _on_Stats_no_health():
