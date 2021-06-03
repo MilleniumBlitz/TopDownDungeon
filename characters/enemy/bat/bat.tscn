@@ -72,6 +72,7 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 7 )
 animation = "Animate"
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -117,14 +118,14 @@ shape = SubResource( 10 )
 shape = SubResource( 11 )
 
 [node name="WanderTimer" type="Timer" parent="."]
-wait_time = 4.0
 one_shot = true
-
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 [connection signal="body_entered" from="PlayerDetection" to="PlayerDetection" method="_on_PlayerDetection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="PlayerDetection" method="_on_PlayerDetection_body_exited"]
 
 [editable path="Hurtbox"]
+
 [editable path="Hitbox"]
+
 [editable path="SoftCollision"]

@@ -44,4 +44,4 @@ func can_see_player():
 	return player_detection_zone.player != null
 	
 func is_wander_timer_stop():
-	return wander_timer.time_left <= 0
+	return wander_timer.time_left == 0

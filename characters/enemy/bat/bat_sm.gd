@@ -4,7 +4,7 @@ func _ready():
 	add_state("idle", $Idle)
 	add_state("wander", $Wander)
 	add_state("chase", $Chase)
-	state = $Wander
+	state = $Idle
 	
 func _input(event):
 	state._handle_input(event)

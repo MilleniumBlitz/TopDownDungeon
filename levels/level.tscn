@@ -477,7 +477,7 @@ tile_data = PoolIntArray( -65540, 0, 0, -65539, 0, 1, -65538, 0, 2, -6, 0, 0, -5
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 427.851, 83.1712 )
 current = true
-zoom = Vector2( 2, 2 )
+zoom = Vector2( 5, 5 )
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 editor_draw_drag_margin = true
@@ -536,16 +536,4 @@ position = Vector2( -112, 176 )
 [node name="Ennemies" type="YSort" parent="YSort"]
 
 [node name="Bat" parent="YSort/Ennemies" instance=ExtResource( 7 )]
-position = Vector2( -42.7201, 102.569 )
-
-[node name="Bat2" parent="YSort/Ennemies" instance=ExtResource( 7 )]
-position = Vector2( -111.631, 118.254 )
-
-[node name="Bat3" parent="YSort/Ennemies" instance=ExtResource( 7 )]
-position = Vector2( -20.1947, 128.932 )
-
-[node name="Bat4" parent="YSort/Ennemies" instance=ExtResource( 7 )]
-position = Vector2( -96.1137, 140.946 )
-
-[node name="Bat5" parent="YSort/Ennemies" instance=ExtResource( 7 )]
-position = Vector2( 242.902, -73.3327 )
+position = Vector2( 238.708, -147.747 )

@@ -1,7 +1,7 @@
 extends State
 
 func _enter():
-	owner.wander_timer.start()
+	owner.wander_timer.start(rand_range(1,3))
 
 func _update(delta):
 	if owner.can_see_player():
@@ -9,6 +9,3 @@ func _update(delta):
 		
 	if owner.is_wander_timer_stop():
 		emit_signal("finished", "wander")
-		
-	owner.velocity = owner.velocity.move_toward(Vector2.ZERO, owner.FRICTION * delta)
-#	owner.move()
