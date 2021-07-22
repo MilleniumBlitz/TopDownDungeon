@@ -12,6 +12,7 @@ onready var player_detection_zone = $PlayerDetection
 onready var sprite = $AnimatedSprite
 onready var hurtbox = $Hurtbox
 onready var soft_collision = $SoftCollision
+onready var wander_timer = $WanderTimer
 
 func _ready():
 	set_physics_process(false)
@@ -41,4 +42,6 @@ func _on_Stats_no_health():
 
 func can_see_player():
 	return player_detection_zone.player != null
-
+	
+func is_wander_timer_stop():
+	return wander_timer.time_left == 0
