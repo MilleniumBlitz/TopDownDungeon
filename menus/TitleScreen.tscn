@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://menus/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://menus/TitleScreen.gd" type="Script" id=2]
+
+[node name="TitleScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.41425
+margin_right = 1.41425
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 76.0
+margin_top = 53.0
+margin_right = 243.0
+margin_bottom = 127.0
+
+[node name="NewGameBtn" parent="CenterContainer/VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 167.0
+margin_bottom = 22.0
+text = "NOUVELLE PARTIE"
+
+[node name="LoadGameBtn" parent="CenterContainer/VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 26.0
+margin_right = 167.0
+margin_bottom = 48.0
+text = "CHARGER"
+
+[node name="LeaveGameBtn" parent="CenterContainer/VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 52.0
+margin_right = 167.0
+margin_bottom = 74.0
+text = "QUITTER"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/NewGameBtn" to="." method="_on_NewGameBtn_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/LoadGameBtn" to="." method="_on_LoadGameBtn_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/LeaveGameBtn" to="." method="_on_LeaveGameBtn_pressed"]
